@@ -49,7 +49,8 @@ public class MainActivity extends AppCompatActivity  implements PopupMenu.OnMenu
         notes = database.mainDAO().getAll();
 
         updateRecyclre(notes);
-
+        
+        //намеревание переход на создание новой заметки
         fab_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,7 +58,8 @@ public class MainActivity extends AppCompatActivity  implements PopupMenu.OnMenu
                 startActivityForResult(intent, 101);
             }
         });
-
+        
+        //поиск
         searchView_home.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -83,7 +85,8 @@ public class MainActivity extends AppCompatActivity  implements PopupMenu.OnMenu
 
         notesListAdapter.filterList(filteredList);
     }
-
+    
+    //добавление или обновление на главное окно новой заметки 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -115,7 +118,8 @@ public class MainActivity extends AppCompatActivity  implements PopupMenu.OnMenu
         notesListAdapter = new NotesListAdapter(MainActivity.this,notes, notesClickListener);
         recyclerView.setAdapter(notesListAdapter);
     }
-
+    
+    // намеревание перехода на второое окно для обновления заметки
     private final NotesClickListener notesClickListener = new NotesClickListener() {
         @Override
         public void onClick(Notes notes) {
@@ -136,7 +140,8 @@ public class MainActivity extends AppCompatActivity  implements PopupMenu.OnMenu
 
         }
     };
-
+    
+    //меню (закрепления / удаления)
     private void showPopup(CardView cardView) {
 
         PopupMenu popupMenu = new PopupMenu(this, cardView);
@@ -144,7 +149,8 @@ public class MainActivity extends AppCompatActivity  implements PopupMenu.OnMenu
         popupMenu.inflate(R.menu.popup_menu);
         popupMenu.show();
     }
-
+    
+    //всплывающие сообщения об выполненных действиях
     @Override
     public boolean onMenuItemClick(MenuItem item) {
 
