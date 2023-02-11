@@ -34,4 +34,6 @@
 -https://github.com/Yuriiru/My-case/wiki/%233-Спецификация
 ### Документация тестирования
 - https://github.com/Yuriiru/My-case/wiki/%238-Граф-программы-и-тестовые-пути
+- https://github.com/Yuriiru/My-case/wiki/%239-Тест-кейсы
+### Пользовательская документация
 - 
