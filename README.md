@@ -33,4 +33,5 @@
 -[https://github.com/Yuriiru/My-case/wiki/%231-Техническое-задание| Техническое-задание]
 -https://github.com/Yuriiru/My-case/wiki/%233-Спецификация
 ### Документация тестирования
+- https://github.com/Yuriiru/My-case/wiki/%238-Граф-программы-и-тестовые-пути
 - 
